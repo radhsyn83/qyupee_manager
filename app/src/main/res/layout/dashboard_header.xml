@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/fragment_dashboard"
+    android:paddingRight="@dimen/_10sdp"
+    android:paddingLeft="@dimen/_10sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_payment"
+            android:textColor="@color/grey_40"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bulan ini"
+            android:textColor="@color/color_success"
+            android:textSize="@dimen/_9ssp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_label_success"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="@dimen/_8sdp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.142.000"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_24ssp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

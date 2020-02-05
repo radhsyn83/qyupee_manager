@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_menu"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="id.qyupee.ui.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="id.qyupee.ui.feed.FeedFragment"
+        android:label="FeedFragment" />
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="id.qyupee.ui.product.ProductFragment"
+        android:label="ProductFragment" />
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="id.qyupee.ui.order.OrderFragment"
+        android:label="OrderFragment" />
+</navigation>

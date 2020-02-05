@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/_5sdp"
+    tools:context=".ui.cart.CartActivity"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_margin="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/colorPrimaryDark">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_3sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/_6sdp"
+                        android:tint="@color/white"
+                        android:src="@drawable/ic_arrow_back" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/transaction"
+                        android:layout_toEndOf="@id/iv_back"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_margin="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/colorPrimaryDark">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_search"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/search"
+                        android:maxLines="1"
+                        android:textSize="@dimen/_9ssp"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:textColorHint="@color/grey_60"
+                        style="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/white"
+                        android:importantForAutofill="no" />
+
+                    <View
+                        android:layout_width="@dimen/_3sdp"
+                        android:layout_height="match_parent"/>
+
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_search"
+                        android:tint="@color/grey_60"
+                        android:padding="@dimen/_3sdp"
+                        android:contentDescription="@null"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/colorPrimaryDark">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_3sdp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_product"
+                        android:layout_width="match_parent"
+                        android:padding="@dimen/_3sdp"
+                        android:clipToPadding="false"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/cart_header">
+
+                    <TextView
+                        android:id="@+id/tvCartQty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10ssp"
+                        tools:ignore="RelativeOverlap" />
+
+                    <ImageView
+                        android:id="@+id/iv_trash"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_delete"
+                        android:tint="@color/white"
+                        android:padding="@dimen/_2sdp"
+                        android:contentDescription="@null" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <RelativeLayout
+                    android:id="@+id/rv_checkout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/bt_color_primary_high_radius">
+
+                    <TextView
+                        android:id="@+id/tvCartGrandTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/null_money"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/overlay_light_90"
+                        android:textSize="@dimen/_9ssp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_checkout"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:tint="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_chevron_right" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkout"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/iv_checkout"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_9ssp"
+                        tools:ignore="RelativeOverlap" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvVariant"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_close_variant"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:src="@drawable/ic_close"
+                    android:padding="@dimen/_5sdp"
+                    android:tint="@color/grey_40"
+                    android:layout_alignParentEnd="true"/>
+
+                <LinearLayout
+                    android:id="@+id/llVariant"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.github.ybq.android.spinkit.SpinKitView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        app:SpinKit_Color="@color/colorPrimary"
+                        style="@style/SpinKitView.Circle"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/please_wait"
+                        android:textSize="@dimen/_9ssp"
+                        android:textColor="@color/grey_70"/>
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:id="@+id/svVariant"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_8sdp"
+                    android:clipToPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/select_variant"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12ssp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_8sdp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/qty"
+                            android:textColor="@color/grey_40"
+                            android:textSize="@dimen/_9ssp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_8sdp"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_qty"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_minus"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:padding="@dimen/_2sdp"
+                                android:adjustViewBounds="true"
+                                android:tint="@color/grey_40"
+                                android:src="@drawable/ic_remove"/>
+
+                            <TextView
+                                android:id="@+id/tvSelectedQty"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="match_parent"
+                                android:text="1"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:clickable="false"
+                                android:enabled="false"
+                                android:textSize="@dimen/_10ssp"
+                                android:background="@color/colorPrimary"/>
+
+                            <ImageView
+                                android:id="@+id/iv_plus"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:padding="@dimen/_2sdp"
+                                android:adjustViewBounds="true"
+                                android:tint="@color/grey_40"
+                                android:src="@drawable/ic_add"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_8sdp" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_size"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/size"
+                                android:textColor="@color/grey_40"
+                                android:textSize="@dimen/_9ssp"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_8sdp" />
+
+                            <com.android.geolo.library.taggroup.GeoloTagGroup
+                                android:id="@+id/tag_size"
+                                style="@style/TagGroup.Custom"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:atg_borderColor="@color/grey_20"
+                                app:atg_textSize="@dimen/_10ssp"
+                                app:atg_modleStyle="radio" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_8sdp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/markup"
+                                android:textColor="@color/grey_40"
+                                android:textSize="@dimen/_9ssp"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_8sdp" />
+
+                            <com.android.geolo.library.taggroup.GeoloTagGroup
+                                android:id="@+id/tag_markup"
+                                style="@style/TagGroup.Custom"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:atg_borderColor="@color/grey_20"
+                                app:atg_textSize="@dimen/_10ssp"
+                                app:atg_modleStyle="radio" />
+
+                            <LinearLayout
+                                android:id="@+id/llPecentage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_8sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/percentage"
+                                    android:textColor="@color/grey_40"
+                                    android:textSize="@dimen/_9ssp"/>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_3sdp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_2ssp"
+                                    android:background="@drawable/bg_pecentage"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/et_pecentage"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/transparent"
+                                        android:hint="0"
+                                        android:inputType="number"
+                                        android:paddingLeft="@dimen/_5ssp"
+                                        android:paddingRight="@dimen/_5ssp"
+                                        android:textSize="@dimen/_9ssp"/>
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_14sdp"
+                                        android:layout_height="@dimen/_14sdp"
+                                        android:adjustViewBounds="true"
+                                        android:padding="@dimen/_3ssp"
+                                        android:src="@drawable/percent"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llPriceManual"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_8sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/price_manual"
+                                    android:textColor="@color/grey_40"
+                                    android:textSize="@dimen/_9ssp"/>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_3sdp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_2ssp"
+                                    android:background="@drawable/bg_pecentage"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/et_manual_price"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/transparent"
+                                        android:hint="0"
+                                        android:inputType="number"
+                                        android:minWidth="@dimen/_50sdp"
+                                        android:paddingLeft="@dimen/_5ssp"
+                                        android:paddingRight="@dimen/_5ssp"
+                                        android:textSize="@dimen/_9ssp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llPrice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_8sdp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/price"
+                                    android:textColor="@color/grey_40"
+                                    android:textSize="@dimen/_9ssp"/>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_3sdp" />
+
+                                <TextView
+                                    android:id="@+id/tv_price"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/quicksand_bold"
+                                    android:text="@string/hint_price"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                    android:textColor="@color/color_danger" />
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/bt_add_cart"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_28sdp"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:text="@string/add_to_cart"
+                                android:textColor="@color/color_warning_dark"
+                                android:textAllCaps="false"
+                                android:textSize="@dimen/_10ssp"
+                                android:padding="@dimen/_5sdp"
+                                android:background="@drawable/bg_radius_warning_light"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</LinearLayout>

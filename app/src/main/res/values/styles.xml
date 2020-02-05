@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/quicksand_medium</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TagGroup.Custom">
+        <item name="strokeWidth">0.7dp</item>
+        <item name="android:textSize">@dimen/_5ssp</item>
+        <item name="atg_horizontalPadding">@dimen/_12sdp</item>
+        <item name="atg_verticalPadding">@dimen/_5sdp</item>
+        <item name="atg_horizontalSpacing">@dimen/_5sdp</item>
+        <item name="atg_verticalSpacing">@dimen/_5sdp</item>
+        <item name="atg_textColor">@color/grey_60</item>
+        <item name="atg_backgroundColor">@color/white</item>
+        <item name="atg_checkedBackgroundColor">@color/colorPrimary</item>
+        <item name="atg_checkedBorderColor">@color/white</item>
+        <item name="atg_checkedTextColor">@color/white</item>
+    </style>
+
+    <style name="EditText.Grey" parent="@style/AppTheme">
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/overlay_light_70</item>
+        <item name="colorControlNormal">@color/overlay_light_30</item>
+    </style>
+</resources>

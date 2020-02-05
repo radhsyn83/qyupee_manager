@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/_8sdp"
+        android:paddingLeft="@dimen/_8sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/tv_qty"
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="wrap_content"
+            android:text="@string/null_number"
+            android:gravity="top"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="@dimen/_11ssp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_variant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_product"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_9ssp"/>
+
+            <TextView
+                android:id="@+id/tv_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_code"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/grey_40"
+                android:textStyle="bold"
+                android:textSize="@dimen/_10ssp"/>
+
+            <TextView
+                android:id="@+id/tv_metode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/format_size_color"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9ssp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/null_money_item"
+                android:gravity="end"
+                android:maxLines="1"
+                android:textColor="@color/grey_40"
+                android:textSize="@dimen/_9ssp"/>
+
+            <TextView
+                android:id="@+id/tv_grand_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/null_money"
+                android:maxLines="1"
+                android:gravity="end"
+                android:ellipsize="end"
+                android:textColor="@color/color_danger"
+                android:textStyle="bold"
+                android:textSize="@dimen/_10ssp"/>
+
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                android:layout_gravity="end"
+                android:maxLines="1"
+                android:textColor="@color/color_warning"
+                android:textSize="@dimen/_9ssp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_10"/>
+
+</LinearLayout>

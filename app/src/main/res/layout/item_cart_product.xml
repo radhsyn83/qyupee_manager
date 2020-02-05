@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_margin="@dimen/_3sdp"
+    app:cardCornerRadius="@dimen/_5sdp">
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/mrlContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true">
+
+        <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_product"
+                    android:maxLines="1"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:gravity="center"
+                    android:ellipsize="end"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/_9ssp"/>
+
+                <TextView
+                    android:id="@+id/tv_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_code"
+                    android:maxLines="1"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:gravity="center"
+                    android:textColor="@color/grey_40"
+                    android:textSize="@dimen/_10ssp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+</androidx.cardview.widget.CardView>

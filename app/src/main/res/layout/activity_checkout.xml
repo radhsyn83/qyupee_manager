@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentTop="true"
+            android:padding="@dimen/_3sdp"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            app:contentInsetEnd="@dimen/_5sdp"
+            app:contentInsetLeft="@dimen/_5sdp"
+            app:contentInsetRight="@dimen/_5sdp"
+            app:contentInsetStart="@dimen/_5sdp"
+            app:elevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_3sdp">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@drawable/ic_back"
+                    android:tint="@color/white" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBar">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_13sdp"
+                android:paddingRight="@dimen/_13sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkout"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16ssp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp" />
+
+                <LinearLayout
+                    android:id="@+id/llRestock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/customer"
+                        android:textColor="@color/grey_40"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_8sdp" />
+
+                    <EditText
+                        android:id="@+id/et_customer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/et_background"
+                        android:ellipsize="end"
+                        android:hint="@string/type_customer"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/grey_50"
+                        android:textSize="@dimen/_9ssp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/note"
+                        android:textColor="@color/grey_40"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_8sdp" />
+
+                    <EditText
+                        android:id="@+id/et_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/et_background"
+                        android:ellipsize="end"
+                        android:hint="@string/type_note"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/grey_50"
+                        android:textSize="@dimen/_9ssp" />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/payment_status"
+                    android:textColor="@color/grey_40"
+                    android:textSize="@dimen/_10ssp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_8sdp" />
+
+                <RadioGroup
+                    android:id="@+id/rgType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbSuccess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/color_success"
+                        android:checked="true"
+                        android:text="@string/success"
+                        android:textColor="@color/color_success" />
+
+                    <Space
+                        android:layout_width="@dimen/_8sdp"
+                        android:layout_height="wrap_content" />
+
+                    <RadioButton
+                        android:id="@+id/rbPending"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/color_warning"
+                        android:text="@string/pending"
+                        android:textColor="@color/color_warning" />
+
+                    <Space
+                        android:layout_width="@dimen/_8sdp"
+                        android:layout_height="wrap_content" />
+
+                </RadioGroup>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_12sdp" />
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/payment_photo"-->
+<!--                    android:textColor="@color/grey_40"-->
+<!--                    android:textSize="@dimen/_10ssp" />-->
+
+<!--                <Space-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/_8sdp" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="@dimen/_92sdp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:adjustViewBounds="true"-->
+<!--                        android:contentDescription="@null"-->
+<!--                        android:src="@drawable/img_thumb" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="@string/photo_reqruitment"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:padding="@dimen/_14sdp"/>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="@dimen/_14sdp"-->
+<!--                            android:layout_marginRight="@dimen/_14sdp"-->
+<!--                            android:background="@drawable/bg_radius_danger"-->
+<!--                            android:padding="@dimen/_10sdp"-->
+<!--                            android:text="@string/select_photo"-->
+<!--                            android:textColor="@color/color_danger" />-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/llFooter"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/bt_checkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_warning"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/checkout"
+            android:textAllCaps="false"
+            android:textColor="@color/color_warning_dark"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

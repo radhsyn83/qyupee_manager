@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">Qyupee Manager</string>
+    <string name="hint_user">HINT_USERNAME</string>
+    <string name="owner">Owner</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="feed">Feed</string>
+    <string name="product">Product</string>
+    <string name="report">Report</string>
+    <string name="logout">Logout</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create_payment">Create Payment</string>
+    <string name="add_feed">Add Feed</string>
+    <string name="feed_add">Add Feed</string>
+    <string name="tipe_feed">Feed Type</string>
+    <string name="restock">Restock</string>
+    <string name="outcome">Outcome</string>
+    <string name="income">Income</string>
+    <string name="select_product">Select Product</string>
+    <string name="select_product_variant">Select product and variant</string>
+    <string name="item_count">Item Count</string>
+    <string name="null_number">0</string>
+    <string name="grand_total">Grand Total</string>
+    <string name="null_money">Rp0</string>
+    <string name="finish">Finish</string>
+    <string name="price">Price</string>
+    <string name="note">Note</string>
+    <string name="type_note">Type note</string>
+    <string name="code">Kode</string>
+    <string name="color">Color</string>
+    <string name="size">Size</string>
+    <string name="count">Count</string>
+    <string name="hint_date_time">HINT_DATE_TIME</string>
+    <string name="hint_note">HINT_NOTE</string>
+    <string name="restock_label">~Restock</string>
+    <string name="outcome_label">~Outcome</string>
+    <string name="income_label">~Income</string>
+    <string name="checkout">Checkout</string>
+    <string name="customer">Customer</string>
+    <string name="payment_status">Payment Status</string>
+    <string name="success">Success</string>
+    <string name="pending">Pending</string>
+    <string name="type_customer">Type customer</string>
+    <string name="payment_photo">Payment Photo</string>
+    <string name="photo_reqruitment">Max : \nResolusi 1000x1000 pixel \nUkuran Max 1MB \nFormat .jpg / .png</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="product_manager">Product Manager</string>
+    <string name="type_search">Search product...</string>
+    <string name="hint_product">HINT_PRODUCT</string>
+    <string name="hint_code">HINT_CODE</string>
+    <string name="hint_price">HINT_PRICE</string>
+    <string name="stock">Stock</string>
+    <string name="transaction">Transaction</string>
+    <string name="cart">Cart</string>
+    <string name="search_product">Search Product</string>
+    <string name="search">Search</string>
+    <string name="total_charge">Charge</string>
+    <string name="qty">Qty</string>
+    <string name="format_qty">%1$s Pcs</string>
+    <string name="delete">Delete</string>
+    <string name="format_size_color">%1$s # %2$s</string>
+    <string name="null_money_item">\@Rp0</string>
+    <string name="format_items_cart">%1$s Items</string>
+    <string name="rto">Waktu permintaan habis.</string>
+    <string name="no_internet">Tidak ada koneksi internet.</string>
+    <string name="somethings_went_wrong">Terjadi gangguan, silahkan coba lagi.</string>
+    <string name="unknown_server">Tidak terhubung dengan server.</string>
+    <string name="select_variant">Pilih Variant</string>
+    <string name="markup">Markup</string>
+    <string name="please_wait">Mohon menunggu.</string>
+    <string name="percentage">Persentase</string>
+    <string name="price_manual">Harga Manual</string>
+    <string name="add_to_cart">Masukkan Keranjang</string>
+    <string name="total_payment">Total Penjualan</string>
+    <string name="rp">Rp</string>
+    <string name="profit">Profit</string>
+    <string name="retur">Retur</string>
+    <string name="cancel">Batal</string>
+    <string name="last_transaction">Transaksi Terkahir</string>
+    <string name="choose_variant">Pilih Variant</string>
+    <string name="hint_size">HINT_SIZE</string>
+    <string name="hpp">Harga Satuan</string>
+    <string name="format_selected_variant">%1$s / %2$s / %3$s</string>
+    <string name="format_note_restock">Restok: %1$s</string>
+    <string name="phone">No. HP</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="order">Transaksi</string>
+    <string name="order_detail">Detail Transaksi</string>
+
+    <string-array name="markup">
+        <item>Harga Jual</item>
+        <item>%</item>
+        <item>HPP</item>
+        <item>Manual</item>
+    </string-array>
+</resources>

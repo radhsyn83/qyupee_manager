@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_restock" />
+
+            <Space
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDateTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:text="@string/hint_date_time"
+                    android:textColor="@color/grey_40"
+                    android:textSize="@dimen/_9ssp" />
+
+                <TextView
+                    android:id="@+id/tvNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_note"
+                    android:textColor="@color/white"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/_11ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:text="@string/restock_label"
+                    android:textColor="@color/grey_40"
+                    android:textSize="@dimen/_9ssp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_5sdp"/>
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/null_money"
+                    android:textColor="@color/color_success"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:background="@drawable/bg_radius_success"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            app:alignContent="flex_start"
+            app:alignItems="flex_start">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:text="@string/code"
+                    android:textColor="@color/grey_40"
+                    android:textSize="@dimen/_9ssp" />
+
+                <TextView
+                    android:id="@+id/tvCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/code"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:text="@string/color"
+                    android:textColor="@color/grey_40"
+                    android:textSize="@dimen/_9ssp" />
+
+                <TextView
+                    android:id="@+id/tvColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/code"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:text="@string/size"
+                    android:textColor="@color/grey_40"
+                    android:textSize="@dimen/_9ssp" />
+
+                <TextView
+                    android:id="@+id/tvSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/code"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:text="@string/count"
+                    android:textColor="@color/grey_40"
+                    android:textSize="@dimen/_9ssp" />
+
+                <TextView
+                    android:id="@+id/tvCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/code"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp" />
+
+            </LinearLayout>
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

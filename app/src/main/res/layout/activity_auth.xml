@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_auth"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_22sdp"
+        android:padding="@dimen/_12sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@null"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_20sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"
+                android:textAlignment="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:inputType="number"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:theme="@style/EditText.Grey" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_8sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password"
+                android:textAlignment="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="-4dp"
+                android:inputType="textPassword"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:theme="@style/EditText.Grey" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_8sdp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_8sdp" />
+
+            <RelativeLayout
+                android:id="@+id/rv_login"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/bt_warning"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/tv_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:layout_centerInParent="true"/>
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    android:visibility="gone"
+                    android:id="@+id/spin_kit"
+                    style="@style/SpinKitView.ThreeBounce"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:SpinKit_Color="@color/colorPrimary" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

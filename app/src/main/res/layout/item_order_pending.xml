@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:contentPadding="@dimen/_2sdp"
+    app:cardCornerRadius="@dimen/_5sdp"
+    android:layout_margin="@dimen/_4sdp"
+    app:cardBackgroundColor="@color/colorPrimaryDark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10/12/2019 22:42"
+                android:textSize="@dimen/_9ssp"
+                android:textColor="@color/grey_40"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp"/>
+
+            <TextView
+                android:id="@+id/tv_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tokopedia"
+                android:textSize="@dimen/_9ssp"
+                android:textColor="@color/white"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5sdp"/>
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp120.123 "
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pending"
+            android:textColor="@color/color_warning"
+            android:textSize="@dimen/_9ssp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_label_warning"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
